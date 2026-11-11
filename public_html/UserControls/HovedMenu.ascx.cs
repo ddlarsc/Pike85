@@ -35,6 +35,13 @@ namespace UserControls
                 spanlinks.InnerHtml = "<br/>";
                 HyperLink_Medlemmer.Visible = true;
                 spanlinks.InnerHtml = "<hr/>";
+
+                string mySqlAdminUrl = System.Configuration.ConfigurationManager.AppSettings["MySQLAdminUrl"];
+                if (!string.IsNullOrEmpty(mySqlAdminUrl))
+                {
+                    HyperLink_MySql.NavigateUrl = mySqlAdminUrl;
+                    HyperLink_MySql.Visible = true;
+                }
             }
             else
             {

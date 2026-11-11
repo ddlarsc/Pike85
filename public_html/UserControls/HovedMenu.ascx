@@ -15,4 +15,5 @@
 <span id="spanlinks" runat="server"/>
 <asp:hyperlink id="HyperLink_Medlemmer" NavigateUrl="/Medlemmer/Default.aspx" runat="server" tabIndex="8" Visible="False">Kun for Medlemmer</asp:hyperlink>
 <span id="spanmedlemmer" runat="server"/>
+<asp:hyperlink id="HyperLink_MySql" runat="server" tabIndex="9" Target="_blank" Visible="False">MySQL database</asp:hyperlink>
 
