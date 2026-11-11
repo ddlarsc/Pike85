@@ -1,0 +1,17 @@
+<%@ Master 
+    AutoEventWireup="true" 
+    CodeFile="Fangster.master.cs" 
+    Inherits="Skabelon.FangsterMaster" 
+    Language="C#" 
+    MasterPageFile="~/Skabelon/Pike85.master" %>
+
+<asp:Content ContentPlaceHolderID="Pike85Body" runat="server">
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <table class="indhold" style="width: 100%; vertical-align: top; text-align: center">
+        <tr>
+            <td rowspan="2">
+                <asp:ContentPlaceHolder ID="FangsterBody" runat="server"/>
+            </td>
+        </tr>
+    </table>
+</asp:Content>

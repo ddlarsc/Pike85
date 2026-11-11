@@ -1,0 +1,22 @@
+﻿<%@ Master 
+    AutoEventWireup="true" 
+    CodeFile="Nyheder.master.cs" 
+    Inherits="Skabelon.Nyheder" 
+    Language="C#"
+    MasterPageFile="~/Skabelon/Pike85.master"
+    %>
+
+<%--<%@ Register TagPrefix="uc1" TagName="MedlemUnderMenu" Src="~/UserControls/UcMedlemUnderMenu.ascx" %>--%>
+
+<asp:Content ID="NyhederMaster" ContentPlaceHolderID="Pike85Body" runat="server">
+    <table>
+        <tr>
+            <td style="text-align:left; width: 100; height:100%; vertical-align: top">
+                <%--<uc1:MedlemUnderMenu id="MedlemMenu" runat="server"/>--%>
+            </td>
+            <td style="padding: 5px; vertical-align:top; width:100%; text-align: center">
+                <asp:ContentPlaceHolder ID="NyhederBody" runat="server"/>
+            </td>
+        </tr>
+    </table>
+</asp:Content>
