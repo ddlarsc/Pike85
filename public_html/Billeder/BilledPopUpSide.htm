@@ -1,0 +1,33 @@
+<HTML>
+	<HEAD>
+		<TITLE>Tilpas Billed Script</TITLE>
+		<script language='javascript'> 
+   var arrTemp=self.location.href.split("?"); 
+   var picUrl = (arrTemp.length>0)?arrTemp[1]:""; 
+   var NS = (navigator.appName=="Netscape")?true:false; 
+     function TilpasBilled() { 
+       iWidth = (NS)?window.innerWidth:document.body.clientWidth; 
+       iHeight = (NS)?window.innerHeight:document.body.clientHeight; 
+       iWidth = document.images[0].width - iWidth + 8; 
+       iHeight = document.images[0].height - iHeight + 26; 
+       window.resizeBy(iWidth, iHeight); 
+       self.focus(); 
+     }; 
+		</script>
+		<LINK href="../pike85.css" type="text/css" rel="stylesheet">
+	</HEAD>
+	<BODY bgcolor="#ffffff" onload='TilpasBilled();' topmargin="0" marginheight="0" leftmargin="0"
+		marginwidth="0">
+		<TABLE id="Table_BilledPopup" cellSpacing="0" cellPadding="3" width="100%" bgColor="black"
+			border="1" align="center">
+			<TR>
+				<TD bgcolor="#ffffff" align=center>
+					<script language='javascript'> 
+						document.write( "<img src='" + picUrl + "' border=0>" );
+					</script>
+					<FONT size=-1><a href="javascript:window.close();">Luk Vindue</a>
+				</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>

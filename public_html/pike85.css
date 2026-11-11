@@ -1,0 +1,75 @@
+a:link
+{
+	color: rgb(204, 0, 0);
+	font-family: Verdana Tahoma Century Gothic, Arial, Helvetica;
+	text-decoration: none; 
+	font-size: 11px;
+	font-weight:bold;
+}
+a:visited
+{
+	color: rgb(204, 0, 0); 
+	font-family: Verdana Tahoma Century Gothic, Arial, Helvetica;
+	text-decoration: none;
+	font-size: 11px;	
+	font-weight:bold;
+} 
+a:active 
+{
+	color: rgb(204, 0, 0);
+	font-family: Verdana Tahoma Century Gothic, Arial, Helvetica;
+	text-decoration: none;
+	font-size: 11px;
+	font-weight:bold;
+}
+body
+{
+	font-family: Verdana Tahoma Century Gothic, Arial, Helvetica;
+	font-size: 10px;
+	background-color: Silver;
+	color: rgb(0, 51, 102);
+}
+td
+{
+	font-family: Verdana;
+	font-size: 10px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: Verdana, Century Gothic, Arial, Helvetica;
+}
+h1
+{
+	color: rgb(0, 51, 102);
+}
+h2
+{
+	color: rgb(0, 51, 102); 
+}
+h3
+{
+	color: rgb(0, 51, 102); 
+}
+h4
+{
+	color: rgb(0, 51, 102);
+}
+h5
+{
+	color: rgb(0, 51, 102);
+}
+h6
+{
+	color: rgb(0, 51, 102);
+}
+
+.indhold  
+{ 
+  padding: 5px; 
+}
+
+.Body
+{
+    height: 100%; padding: 5px; text-align: center; vertical-align:top; width:100%;
+}

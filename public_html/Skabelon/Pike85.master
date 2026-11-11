@@ -1,0 +1,106 @@
+<%@ Master 
+    AutoEventWireup="true" 
+    CodeFile="~/Skabelon/Pike85.master.cs" 
+    Inherits="Skabelon.SkabelonPike85" 
+    Language="C#" %>
+
+<%@ Register TagPrefix="uc1" TagName="HovedReklame" Src="~/UserControls/HovedReklame.ascx" %>
+<%@ Register TagPrefix="uc1" TagName="Login" Src="~/UserControls/Login.ascx" %>
+<%@ Register TagPrefix="uc1" TagName="Pike85_Logo" Src="~/UserControls/Pike85_Logo.ascx" %>
+<%@ Register TagPrefix="uc1" TagName="HovedMenu" Src="~/UserControls/HovedMenu.ascx" %>
+<%@ Register TagPrefix="uc1" TagName="Calendar" Src="~/UserControls/UcCalendar.ascx" %>
+<%@ Register tagPrefix="uc1" tagName="Logo" src="~/UserControls/UcDefaultLogo.ascx"%>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Pike 85 Start Side</title>
+        <meta content="Pike 85 danske fiske forening med speciale i gedde, torsk, aborre laks, sandart" name="title" />
+        <meta content="Pike 85 dansk lystfiskeri forening med speciale i gedde, torsk, aborre laks, sandart" name="Description" />
+        <meta content="gedde torsk aborre laks pike pike85 fisk fishing cod salmon halibut lystfiskeri havfiskeri søer Esrum Denmark Øresund" name="Keywords" />
+        <meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR" />
+        <meta content="C#" name="CODE_LANGUAGE" />
+        <meta content="JavaScript" name="vs_defaultClientScript" />
+        <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" />
+        <link href="/pike85.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript">
+        function PopupBilled(billedURL) 
+        {
+            window.open( "/Billeder/BilledPopUpSide.htm?" + billedURL, "", "resizable=1,HEIGHT=200,WIDTH=200"); 
+		}
+		
+		function clickLoginButton(e, buttonid)
+		{ 
+			var bt = document.getElementById(buttonid); 
+			if (typeof bt == 'object')
+			{ 
+				if(navigator.appName.indexOf("Netscape")>(-1))
+				{ 
+                  if (e.keyCode == 13)
+                  { 
+					bt.click(); 
+					return false; 
+                  } 
+				} 
+				if (navigator.appName.indexOf("Microsoft Internet Explorer")>(-1))
+				{ 
+				  if (event.keyCode == 13)
+				  { 
+					bt.click(); 
+					return false; 
+                  } 
+				} 
+			} 
+		}  
+        </script>
+    </head>
+    <body style="text-align: center; background-color: #cccccc">
+        <form id="Form2" method="post" runat="server">
+            <div style="text-align: center">
+                <table style="border-collapse: collapse; border-color: #758dc7; background-color: #ffffff; border-right: 3px outset; border-right-color: #000000; border-top: 3px outset; border-top-color: #758dc7; border-left: 3px outset; border-left-color: #758dc7; border-bottom: 3px outset; border-bottom-color: #000000" cellspacing="0" cellpadding="0" width="1024" border="3">
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center">
+                                <table id="MainTable" style="border-width: 0px; width: 1024px">
+                                    <tr>
+                                        <td style="border-color: #758dc7; border-right: 3px outset; border-right-color: #000000; border-top: 3px outset; border-top-color: #758dc7; border-left: 3px outset; border-left-color: #758dc7; border-bottom: 3px outset; border-bottom-color: #000000; width: 900px; color: #ffffff; background-color: #758dc7" colspan="2">
+                                            <uc1:Pike85_Logo ID="UC_Pike85_Logo" runat="server" />
+                                        </td>
+                                        <td style="width: 124; text-align: center; vertical-align: top">
+                                            <uc1:Logo ID="Logo" runat="server" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 900px" colspan="2">
+					    <p style="text-align: center">
+					    <uc1:HovedReklame ID="UC_HovedReklame" runat="server" />
+                                            </p>
+                                        </td>
+                                        <td style="width: 124; text-align: center; vertical-align: bottom">
+                                            <uc1:Login ID="Login1" runat="server" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 1024px; background-color: #758dc7; height: 2" colspan="3" />                                    
+                                    </tr>
+                                    <tr>
+                                        <td class="indhold" style="border-right-style: solid; border-right-color: #758dc7; border-right-width: thin; width: 900px; height: 100%" valign="top" rowspan="2" colspan="2">
+                                            <asp:ContentPlaceHolder ID="Pike85Body" runat="server" />
+                                        </td>
+                                        <td style="width: 124; vertical-align: top">
+                                            <p style="text-align: center">
+                                                <asp:Image ID="Image_Flag" runat="server" ImageUrl="~/Billeder/dannebrog.jpg" Visible="False" />&nbsp;
+                                                <asp:Label ID="Label_Foedselar" runat="server" Font-Bold="True" Font-Size="Small" ForeColor="Red" />&nbsp;
+                                            </p>
+                                            <uc1:HovedMenu ID="UC_HovedMenu" runat="server" />
+                                            <uc1:Calendar ID="Calendar1" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </body>
+</html>

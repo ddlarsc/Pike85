@@ -1,0 +1,21 @@
+<%@ Master 
+    AutoEventWireup="true" 
+    CodeFile="Klubben.master.cs" 
+    Inherits="Skabelon.KlubbenMaster" 
+    Language="C#" 
+    MasterPageFile="~/Skabelon/Pike85.master" %>
+
+<%@ Register TagPrefix="uc1" TagName="UcKlubbenUnderMenu" Src="~/UserControls/UcKlubbenUnderMenu.ascx" %>
+
+<asp:Content ContentPlaceHolderID="Pike85Body" runat="server">
+    <table>
+        <tr>
+            <td style="width: 100px; height:100%; text-align:left; vertical-align:top">
+                <uc1:UcKlubbenUnderMenu ID="KlubbenMenu" runat="server" />
+            </td>
+            <td style=" padding: 5px; vertical-align:top; width:100%; text-align:center">
+                <asp:ContentPlaceHolder ID="KlubbenBody" runat="server" />
+            </td>
+        </tr>
+    </table>
+</asp:Content>
