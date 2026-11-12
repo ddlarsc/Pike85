@@ -9,8 +9,6 @@ public partial class Default : Page
         HentPokaler();
         HentFangster();
         HentBlogger();
-        HentNyheder();
-        HentOpslag();
         //HentBlogOversigt(); //ændring pr. 170715
     }
 
@@ -35,18 +33,6 @@ public partial class Default : Page
     {
         var userControl = (UcBlog)Page.LoadControl("~/UserControls/UcBlog.ascx");
         phBlogger.Controls.Add(userControl);
-    }
-
-    private void HentNyheder()
-    {
-        var userControl = (UcDefaultNyheder)Page.LoadControl("~/UserControls/UcDefaultNyheder.ascx");
-        phNyheder.Controls.Add(userControl);
-    }
-
-    private void HentOpslag()
-    {
-        var userControl = (UcDefaultOpslag)Page.LoadControl("~/UserControls/UcDefaultOpslag.ascx");
-        phOpslag.Controls.Add(userControl);
     }
 
     //ændring pr. 170715

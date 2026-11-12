@@ -25,6 +25,11 @@ namespace UserControls
                 spannyheder.InnerHtml = "<br/>";
             }
 
+            if (HyperLink_Opslagstavle.Visible)
+            {
+                spanopslagstavle.InnerHtml = "<br/>";
+            }
+
             if (Hyperlink_Fangst.Visible)
             {
                 spanfangst.InnerHtml = "<br/>";
