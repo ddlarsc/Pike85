@@ -91,11 +91,8 @@ namespace Medlemmer.Arrangement
             btnDelete.CausesValidation = false;
 
             //Setting up the Calendar Icons
-            pickDate1.Attributes.Add("onclick", "cal1.select(" + IdentifyCtrl(txtDeadlineDate) + ",'" + IdentifyCtrl(anchorCal) + "','dd-MM-yyyy', getDate(" + IdentifyCtrl(txtDeadlineDate) + ")); return false;");
             pickDate1.Attributes.Add("src", Resources.Pike85.IconCalendarDay);
-            pickDate2.Attributes.Add("onclick", "cal1.select(" + IdentifyCtrl(txtStartDate) + ",'" + IdentifyCtrl(anchorCal) + "','dd-MM-yyyy', getDate(" + IdentifyCtrl(txtStartDate) + ")); return false;");
             pickDate2.Attributes.Add("src", Resources.Pike85.IconCalendarDay);
-            pickDate3.Attributes.Add("onclick", "cal1.select(" + IdentifyCtrl(txtEndDate) + ",'" + IdentifyCtrl(anchorCal) + "','dd-MM-yyyy', getDate(" + IdentifyCtrl(txtEndDate) + ")); return false;");
             pickDate3.Attributes.Add("src", Resources.Pike85.IconCalendarDay);
 
             //Private methods
