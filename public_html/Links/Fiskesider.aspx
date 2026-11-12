@@ -19,8 +19,6 @@
             <asp:ListItem Value="Danmark">Danmark</asp:ListItem>
             <asp:ListItem Value="Sverige">Sverige</asp:ListItem>
             <asp:ListItem Value="Norge">Norge</asp:ListItem>
-            <asp:ListItem Value="USA/Canada/m.fl.">USA/Canada/m.fl.</asp:ListItem>
-            <asp:ListItem Value="Tyskland">Tyskland</asp:ListItem>
             <asp:ListItem Value="Diverse">Diverse</asp:ListItem>
         </asp:DropDownList>
     </p>

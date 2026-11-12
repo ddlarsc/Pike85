@@ -8,17 +8,53 @@
     Title="Opsætning af arrangementer" %>
 
 <asp:Content ContentPlaceHolderID="MedlemBody" ID="ContentOpretArrangement" runat="server">
-    <script type="text/javascript" src="~/ScriptLib/JAVA/AnchorPosition.js"></script>
-    <script type="text/javascript" src="~/ScriptLib/JAVA/CalendarPopup.js"></script>
-    <script type="text/javascript" src="~/ScriptLib/JAVA/date.js"></script>
-    <script type="text/javascript" src="~/ScriptLib/JAVA/PopupWindow.js"></script>
     <script type="text/javascript">
-        var cal1 = new CalendarPopup();
-        cal1.offsetX = 20;
-        cal1.offsetY = 20;
-        cal1.setWeekStartDay(1);
-    </script>
-    <table style="border-spacing: 2px; width: 600px">
+        (function () {
+            var map = { pickDate1: 'txtDeadlineDate', pickDate2: 'txtStartDate', pickDate3: 'txtEndDate' };
+            function find(suffix) { return document.querySelector('[id$="' + suffix + '"]'); }
+            function toIso(s) {
+                var m = /^(\d{1,2})-(\d{1,2})-(\d{4})$/.exec((s || '').trim());
+                return m ? m[3] + '-' + ('0' + m[2]).slice(-2) + '-' + ('0' + m[1]).slice(-2) : '';
+            }
+            function toDk(s) { var p = s.split('-'); return p[2] + '-' + p[1] + '-' + p[0]; }
+            function open(img, box) {
+                var d = document.createElement('input');
+                d.type = 'date';
+                d.value = toIso(box.value);
+                var r = img.getBoundingClientRect();
+                d.style.cssText = 'position:fixed;left:' + r.left + 'px;top:' + r.bottom + 'px;width:1px;height:1px;opacity:0;border:0;padding:0';
+                document.body.appendChild(d);
+                var done = function () { if (d.parentNode) d.parentNode.removeChild(d); };
+                d.addEventListener('change', function () {
+                    if (d.value) { box.value = toDk(d.value); if (box.onchange) box.onchange(); }
+                    done();
+                });
+                d.addEventListener('blur', function () { setTimeout(done, 200); });
+                d.focus();
+                if (d.showPicker) { d.showPicker(); } else { d.click(); }
+            }
+            function init() {
+                for (var k in map) {
+                    var img = find(k);
+                    if (img && !img.getAttribute('src')) img.src = '/images/icon_calendar_day.png';
+                    if (img) img.style.cursor = 'pointer';
+                }
+            }
+            document.addEventListener('click', function (e) {
+                var img = e.target;
+                if (!img || !img.id) return;
+                for (var k in map) {
+                    if (img.id.slice(-k.length) === k) {
+                        e.preventDefault();
+                        var box = find(map[k]);
+                        if (box) open(img, box);
+                        return;
+                    }
+                }
+            });
+            if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+        })();
+    </script>    <table style="border-spacing: 2px; width: 600px">
         <tr style="text-align: center">
             <td style="width:150px"/>
             <td style="width:300px"><h4>Opret arrangement / Rediger arrangement</h4></td>
@@ -84,7 +120,7 @@
             <td>Slutdato:</td>
             <td><asp:TextBox ID="txtEndDate" runat="server" TabIndex="56" Width="300px" /></td>
             <td>
-                <img alt="Open Calendar" id="pickDate3" onmouseout="mouseout()" onmouseover="mouseover()" runat="server" src="" />
+                <img alt="Open Calendar" id="pickDate3" runat="server" src="" />
                 <asp:RequiredFieldValidator ID="rfvEndDate" runat="server" />
                 <asp:RegularExpressionValidator ID="revEndDate" runat="server" />
                 <asp:CompareValidator ID="cvEndDate" runat="server"/>

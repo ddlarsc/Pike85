@@ -9,6 +9,8 @@
 <span id="spanklubben" runat="server"/>
 <asp:hyperlink id="HyperLink_Nyheder" NavigateUrl="/Nyheder/VisNyheder.aspx" runat="server" tabIndex="2">Nyheder</asp:hyperlink>
 <span id="spannyheder" runat="server"/>
+<asp:hyperlink id="HyperLink_Opslagstavle" NavigateUrl="/Nyheder/VisOpslag.aspx" runat="server" tabIndex="3">Opslagstavle</asp:hyperlink>
+<span id="spanopslagstavle" runat="server"/>
 <asp:hyperlink id="Hyperlink_Fangst" NavigateUrl="/Fangster/FindFangster.aspx" runat="server" tabIndex="5">Fangster</asp:hyperlink>
 <span id="spanfangst" runat="server"/>
 <asp:hyperlink id="Hyperlink_Links" NavigateUrl="/Links/Fiskesider.aspx" runat="server" tabIndex="7">Links</asp:hyperlink>
