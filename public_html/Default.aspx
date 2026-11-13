@@ -15,7 +15,7 @@
 <%@ Reference Control="~/UserControls/UcDefaultGalleri.ascx" %>
 
 <asp:Content ContentPlaceHolderID="Pike85Body" ID="Content1" Runat="Server">
-    <table style="width: 100%; table-layout: fixed">
+    <table style="width: 100%; table-layout: auto">
         <tr>
             <td style="border-right: #758dc7 thin solid; width: 33.33%; vertical-align: top" rowspan="2">
                 <asp:PlaceHolder id="phPokalOversigt" runat="server" EnableViewState="True" ViewStateMode="Enabled"/>

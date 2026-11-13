@@ -1,4 +1,4 @@
-/* Pike85 – modern look */
+﻿/* Pike85 – modern look */
 :root
 {
 	--ink: #14233c;
@@ -181,3 +181,9 @@ table { border-spacing: 0; }
 #bloggerText img { max-width: 100% !important; height: auto !important; float: none !important; margin: 4px auto !important; display: inline-block; }
 #bloggerText table, #bloggerText div { max-width: 100% !important; }
 #bloggerText a[style], #bloggerText div[style] { float: none !important; margin-left: 0 !important; margin-right: 0 !important; }
+
+#bloggerText, #bloggerText * { max-width: 100% !important; box-sizing: border-box; overflow-wrap: anywhere; }
+#bloggerText table { width: 100% !important; table-layout: fixed; transform: none !important; }
+#bloggerText div { width: auto !important; height: auto !important; transform: none !important; }
+#bloggerText img { width: auto; height: auto !important; }
+#bloggerText { display: block; overflow: hidden; }
