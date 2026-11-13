@@ -85,8 +85,7 @@ input[type=submit]:hover, input[type=button]:hover, button:hover { background: v
 body > form > div > table
 {
 	width: 100% !important;
-	max-width: 1180px;
-	margin: 0 auto;
+	margin: 0;
 	border: 0 !important;
 	border-radius: var(--radius);
 	background: var(--surface) !important;
@@ -100,7 +99,7 @@ body > form > div > table
 /* Header banner */
 #MainTable > tbody > tr:first-child > td:first-child
 {
-	background: linear-gradient(135deg, var(--brand-dark), var(--brand)) !important;
+	background: var(--brand-dark) !important;
 	color: #fff !important;
 	border-bottom: 4px solid var(--accent) !important;
 }
@@ -113,6 +112,7 @@ body > form > div > table
 
 .indhold
 {
+	width: auto !important;
 	padding: 20px;
 	border-right: 1px solid var(--line) !important;
 }
@@ -120,9 +120,41 @@ body > form > div > table
 /* Sidebar */
 #MainTable > tbody > tr:nth-child(4) > td:last-child
 {
+	width: 190px;
 	padding: 12px;
-	background: #f7f9fc;
+	background: var(--brand-dark) !important;
+	border-left: 4px solid var(--accent) !important;
+	color: #fff;
 }
+
+/* Right-hand column above the menu (logo and login) shares the blue panel */
+#MainTable > tbody > tr:first-child > td:last-child,
+#MainTable > tbody > tr:nth-child(2) > td:last-child
+{
+	background: var(--brand-dark) !important;
+	color: #fff;
+}
+
+#MainTable > tbody > tr:nth-child(2) > td:last-child { border-left: 4px solid var(--accent) !important; vertical-align: middle !important; }
+
+#MainTable > tbody > tr:nth-child(2) > td:last-child > p:first-child { display: none; }
+#MainTable > tbody > tr:nth-child(2) > td:last-child > div { text-align: center !important; }
+
+#MainTable > tbody > tr:nth-child(2) > td:last-child a,
+#MainTable > tbody > tr:nth-child(2) > td:last-child span { color: #fff !important; }
+
+#MainTable > tbody > tr:first-child > td:last-child a,
+#MainTable > tbody > tr:nth-child(2) > td:last-child a,
+#MainTable > tbody > tr:first-child > td:last-child a:visited,
+#MainTable > tbody > tr:nth-child(2) > td:last-child a:visited,
+#MainTable > tbody > tr:nth-child(4) > td:last-child a,
+#MainTable > tbody > tr:nth-child(4) > td:last-child a:link,
+#MainTable > tbody > tr:nth-child(4) > td:last-child a:visited
+{
+	color: #fff;
+}
+
+#MainTable > tbody > tr:nth-child(4) > td:last-child a:hover { color: #ffd6d6; }
 
 table { border-spacing: 0; }
 

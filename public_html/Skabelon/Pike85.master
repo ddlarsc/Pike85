@@ -21,7 +21,7 @@
         <meta content="C#" name="CODE_LANGUAGE" />
         <meta content="JavaScript" name="vs_defaultClientScript" />
         <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" />
-        <link href="/pike85.css" type="text/css" rel="stylesheet" />
+        <link href="/pike85.css?v=<%= System.IO.File.GetLastWriteTimeUtc(Server.MapPath("~/pike85.css")).Ticks %>" type="text/css" rel="stylesheet" />
         <script type="text/javascript">
         function PopupBilled(billedURL) 
         {
