@@ -176,3 +176,8 @@ table { border-spacing: 0; }
 
 .galleri { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .galleri .galleriBilled { min-width: 0; width: 110px; height: 110px; object-fit: cover; border-radius: 6px; }
+
+#bloggerText { overflow: hidden; }
+#bloggerText img { max-width: 100% !important; height: auto !important; float: none !important; margin: 4px auto !important; display: inline-block; }
+#bloggerText table, #bloggerText div { max-width: 100% !important; }
+#bloggerText a[style], #bloggerText div[style] { float: none !important; margin-left: 0 !important; margin-right: 0 !important; }

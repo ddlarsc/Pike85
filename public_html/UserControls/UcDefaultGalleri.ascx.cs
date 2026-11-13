@@ -8,7 +8,7 @@ namespace UserControls
 {
     public partial class UcDefaultGalleri : System.Web.UI.UserControl
     {
-        private const int AntalBilleder = 10;
+        private const int AntalBilleder = 20;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,7 +16,7 @@ namespace UserControls
             var found = 0;
 
             var where = Page.User.Identity.IsAuthenticated ? string.Empty : " AND Offentlig='1'";
-            var sql = "SELECT Art, BilledMappe, Billed1 FROM fangster WHERE Billed1 <> ''" + where + " ORDER BY RAND() LIMIT 60";
+            var sql = "SELECT Art, BilledMappe, Billed1 FROM fangster WHERE Billed1 <> ''" + where + " ORDER BY RAND() LIMIT 100";
 
             using (var connection = new MySqlConnection(Application["MySQLConnString"].ToString()))
             {
