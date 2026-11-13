@@ -9,6 +9,7 @@ public partial class Default : Page
         HentPokaler();
         HentFangster();
         HentBlogger();
+        HentGalleri();
         //HentBlogOversigt(); //ændring pr. 170715
     }
 
@@ -33,6 +34,12 @@ public partial class Default : Page
     {
         var userControl = (UcBlog)Page.LoadControl("~/UserControls/UcBlog.ascx");
         phBlogger.Controls.Add(userControl);
+    }
+
+    private void HentGalleri()
+    {
+        var userControl = Page.LoadControl("~/UserControls/UcDefaultGalleri.ascx");
+        phGalleri.Controls.Add(userControl);
     }
 
     //ændring pr. 170715

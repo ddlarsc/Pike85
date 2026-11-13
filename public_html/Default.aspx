@@ -12,16 +12,20 @@
 <%@ Reference Control="~/UserControls/UcDefaultFangster.ascx" %>
 <%@ Reference Control="~/UserControls/UcBlog.ascx" %>
 <%@ Reference Control="~/UserControls/UcBlogOversigt.ascx" %>
+<%@ Reference Control="~/UserControls/UcDefaultGalleri.ascx" %>
 
 <asp:Content ContentPlaceHolderID="Pike85Body" ID="Content1" Runat="Server">
     <table style="width: 100%; table-layout: fixed">
         <tr>
-            <td style="border-right: #758dc7 thin solid; width: 50%; vertical-align: top" rowspan="2">
+            <td style="border-right: #758dc7 thin solid; width: 30%; vertical-align: top" rowspan="2">
                 <asp:PlaceHolder id="phPokalOversigt" runat="server" EnableViewState="True" ViewStateMode="Enabled"/>
                 <asp:PlaceHolder id="phFangster" runat="server" EnableViewState="True" ViewStateMode="Enabled"/>
             </td>
-            <td style="width: 50%; text-align: center; vertical-align: top;" rowspan="2">
+            <td style="width: 40%; text-align: center; vertical-align: top;" rowspan="2">
                 <asp:PlaceHolder ID="phBlogger" runat="server" />
+            </td>
+            <td style="border-left: #758dc7 thin solid; width: 30%; text-align: center; vertical-align: top;" rowspan="2">
+                <asp:PlaceHolder ID="phGalleri" runat="server" />
             </td>
         </tr>
     </table>
