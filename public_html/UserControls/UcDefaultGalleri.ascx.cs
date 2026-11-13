@@ -35,7 +35,7 @@ namespace UserControls
                             continue;
                         }
 
-                        html.Append("<a href=\"javascript:PopupBilled('" + folder + name + ".jpg')\">");
+                        html.Append("<a href=\"" + folder + name + ".jpg\" target=\"_blank\">");
                         html.Append("<img class=\"galleriBilled\" alt=\"" + Server.HtmlEncode(reader["Art"].ToString()) + "\" src=\"" + thumb + "\" />");
                         html.Append("</a>");
                         found++;
